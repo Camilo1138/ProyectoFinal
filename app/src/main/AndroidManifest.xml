@@ -48,8 +48,8 @@
             android:exported="false" />
         <activity
             android:name=".InicioActivity"
-            android:launchMode="singleTop">
-        </activity>
+            android:launchMode="singleTop"/>
+
         <activity
             android:name=".SeleccionarPerfilActivity"
             android:exported="false" />

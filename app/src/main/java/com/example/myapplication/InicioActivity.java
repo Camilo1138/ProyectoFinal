@@ -75,6 +75,7 @@ public class InicioActivity extends AppCompatActivity implements CalendarAdapter
                 startActivity(new Intent(this, activityClass));
             }
             return true;
+
         });
 
         // Configura listeners para los botones
@@ -144,12 +145,27 @@ public class InicioActivity extends AppCompatActivity implements CalendarAdapter
 
     }
 
+
+    private void loadProfileName() {
+        PerFil perfilData = (PerFil) getIntent().getSerializableExtra("perfil_data");
+
+        if (perfilData != null) {
+            tvProfileName.setText(perfilData.getNombre());
+            saveProfileName(perfilData.getNombre());  // Guardar el nombre en SharedPreferences
+        } else {
+            SharedPreferences preferences = getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
+            String savedProfileName = preferences.getString("profile_name", "Perfil no encontrado");
+            tvProfileName.setText(savedProfileName);
+        }
+    }
+
     private void saveProfileName(String profileName) {
         SharedPreferences preferences = getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("profile_name", profileName);
         editor.apply();
     }
+
 
     private void initWidgets() {
         calendarRecyclerView = findViewById(R.id.calendarRecyclerView);
@@ -190,6 +206,7 @@ public class InicioActivity extends AppCompatActivity implements CalendarAdapter
         setEventAdapter();
         loadMedicinesFromFile();
         loadActivitiesFromFile();
+        loadProfileName();
 
     }
 
