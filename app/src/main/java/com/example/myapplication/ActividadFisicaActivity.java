@@ -32,7 +32,7 @@ public class ActividadFisicaActivity extends AppCompatActivity {
         recyclerViewActivities = findViewById(R.id.recyclerViewActivities);
         Button btnActividadF = findViewById(R.id.btn_actividadesF);
         btnActividadF.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ListadoMedicosActivity.class);
+            Intent intent = new Intent(this, ActividadFisicaActivity.class);
             startActivity(intent);
         });
 
