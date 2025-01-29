@@ -3,15 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FDFCFD"
-    tools:context=".AggCitaActivity">
+    tools:context=".AggCitaActivity"
+    android:padding="16dp">
     <!-- Este es un comentario en XML -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Añadir Cita Médica"
+        android:textColor="@color/blue_primary"
         android:textSize="24sp"
-        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -20,7 +23,7 @@
         android:layout_height="wrap_content"
         android:hint="Título de la cita"
         android:layout_below="@id/tvTitle"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="16dp" />
 
     <Spinner
@@ -38,21 +41,23 @@
         android:layout_height="wrap_content"
         android:text="Seleccionar Fecha"
         android:background="@android:color/transparent"
-        android:textColor="@color/black"
+        android:textColor="@color/blue_primary"
         android:layout_below="@id/spinnerMedicos"
         android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp" />
 
     <Button
         android:id="@+id/btnSelectTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="162dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/spinnerMedicos"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/btnSelectDate"
         android:background="@android:color/transparent"
-        android:textColor="@color/black"
         android:text="Seleccionar Hora"
-        android:layout_below="@id/btnSelectDate"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp" />
+        android:textColor="@color/blue_primary" />
 
     <Button
         android:id="@+id/btnGuardar"
@@ -61,7 +66,8 @@
         android:text="Guardar Cita"
         android:layout_below="@id/btnSelectTime"
         android:layout_marginTop="24dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#005BAC"/>
 
     <Button
         android:id="@+id/btnSalir"
@@ -70,7 +76,8 @@
         android:layout_below="@+id/btnlista_citas"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="9dp"
-        android:text="Salir" />
+        android:text="Salir"
+        android:backgroundTint="#005BAC"/>
 
     <Button
         android:id="@+id/btnlista_citas"
@@ -79,7 +86,8 @@
         android:text="Lista citas"
         android:layout_below="@id/btnSelectTime"
         android:layout_marginTop="80dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#005BAC"/>
 
 
 </RelativeLayout>

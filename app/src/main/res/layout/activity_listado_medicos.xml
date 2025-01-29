@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FDFCFD"
-    android:padding="16dp">
+    android:padding="24dp">
 
 
     <TextView
@@ -17,7 +17,7 @@
         android:text="Lista de médicos"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textColor="@color/blue_primary" />
 
 
     <ListView
@@ -31,12 +31,15 @@
         android:id="@+id/btnAgregarMedico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Añadir un médico." />
+        android:layout_marginTop="16dp"
+        android:text="Añadir un médico."
+        android:backgroundTint="#005BAC"/>
 
 
     <Button
         android:id="@+id/btnSalir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#005BAC"
         android:text="Salir" />
 </LinearLayout>

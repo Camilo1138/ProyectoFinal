@@ -3,54 +3,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="28dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Registrar Actividad Física"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/blue_primary"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fecha"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textColor="@color/blue_primary"/>
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="dd/mm/yyyy"
         android:inputType="date" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Actividad" />
+        android:text="Actividad"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/blue_primary"/>
     <Spinner
         android:id="@+id/spinnerActivity"
         android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
         android:layout_height="wrap_content" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Duración (minutos)" />
+        android:layout_marginTop="15dp"
+        android:text="Duración (minutos)"
+        android:textColor="@color/blue_primary"/>
     <EditText
         android:id="@+id/editTextDuration"
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:inputType="number" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Horario" />
+        android:layout_marginTop="10dp"
+        android:text="Horario"
+        android:textColor="@color/blue_primary"/>
     <Spinner
         android:id="@+id/spinnerTime"
         android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content" />
 
     <Button
@@ -58,19 +71,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrar"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#005BAC"/>
     <Button
         android:id="@+id/btnmostrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="lista de actividades"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#005BAC"/>
 
     <Button
         android:id="@+id/btnSalir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Salir"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#005BAC"/>
 
 </LinearLayout>

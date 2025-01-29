@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:id="@+id/secion"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <!-- Contenedor principal donde se mostrarán los fragmentos -->
 
@@ -24,7 +25,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center"
             android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="60dp"
             android:contentDescription="Profile Image"
             android:src="@drawable/icono_perfil" />
         <TextView
@@ -32,7 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre del Perfil"
-            android:textColor="@color/black"
+            android:textColor="@color/blue_primary"
+            android:layout_marginTop="20dp"
             android:textSize="25sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -42,10 +44,11 @@
             android:id="@+id/btn_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="400dp"
             android:text="Cerrar Sesión"
             android:textColor="@color/white"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="400dp" />
+            android:backgroundTint="#005BAC"/>
 
 
     </FrameLayout>
@@ -54,11 +57,12 @@
         android:id="@+id/bottom_navigation3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#005BAC"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:layout_marginBottom="-30dp"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
