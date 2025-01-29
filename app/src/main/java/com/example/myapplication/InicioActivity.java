@@ -122,6 +122,8 @@ public class InicioActivity extends AppCompatActivity implements CalendarAdapter
         }
 
         setWeekView();
+
+
         // Vincula el TextView
         tvProfileName = findViewById(R.id.profile_name);
 
@@ -135,11 +137,10 @@ public class InicioActivity extends AppCompatActivity implements CalendarAdapter
             // Muestra el nombre del perfil en el TextView
             tvProfileName.setText(perfilData.getNombre());
 
+
+
+
         }
-
-
-
-
 
     }
 

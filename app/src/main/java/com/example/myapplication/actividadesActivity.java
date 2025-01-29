@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,7 @@ import java.util.Map;
 
 public class actividadesActivity extends AppCompatActivity {
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,27 @@ public class actividadesActivity extends AppCompatActivity {
                 startActivity(new Intent(this, activityClass));
             }
             return true;
+        });
+        Button btnMedicos = findViewById(R.id.btn_medicos);
+        btnMedicos.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ListadoMedicosActivity.class);
+            startActivity(intent);
+        });
+        Button btn_medicamentos = findViewById(R.id.btn_medicamentos);
+        btn_medicamentos.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ListaMedicinasActivity.class);
+            startActivity(intent);
+        });
+        Button btn_citas = findViewById(R.id.btn_citas);
+        btn_citas.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CitasActivity.class);
+            startActivity(intent);
+        });
+
+        Button btn_actividades = findViewById(R.id.btn_actividades);
+        btn_actividades.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ActividadFisicaActivity.class);
+            startActivity(intent);
         });
     }
 }

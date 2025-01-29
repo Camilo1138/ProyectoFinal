@@ -25,17 +25,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /* // Botón para abrir la actividad de administración de medicamentos
-        Button buttonOpenMedicamentosActivity = findViewById(R.id.btn_medicamentos);
-        buttonOpenMedicamentosActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MedicamentosActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        */
     }
 
 

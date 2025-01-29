@@ -62,6 +62,8 @@ public class AgregarMedicinaActivity extends AppCompatActivity {
 
         // Botón para registrar toma
         btnRegister.setOnClickListener(v -> registerDose());
+
+
     }
 
     @Override
@@ -187,4 +189,5 @@ public class AgregarMedicinaActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 }
