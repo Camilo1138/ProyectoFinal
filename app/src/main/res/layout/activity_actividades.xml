@@ -37,7 +37,7 @@
 
         <!-- Botón Actividades Físicas -->
         <Button
-            android:id="@+id/btn_actividades"
+            android:id="@+id/btn_actividadesF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Actividades Físicas"
@@ -69,6 +69,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_navigation2" />
+
+
 
     <!-- BottomNavigationView para el menú de navegación -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

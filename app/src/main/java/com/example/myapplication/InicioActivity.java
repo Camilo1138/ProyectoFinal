@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -128,13 +130,25 @@ public class InicioActivity extends AppCompatActivity implements CalendarAdapter
         if (perfilData != null) {
             // Muestra el nombre del perfil en el TextView
             tvProfileName.setText(perfilData.getNombre());
-
+            // Guardar el nombre del perfil en SharedPreferences
+            saveProfileName(perfilData.getNombre());
+            // Muestra el nombre del perfil en el TextView
+            tvProfileName.setText(perfilData.getNombre());
 
         }
 
 
+
+
+
     }
 
+    private void saveProfileName(String profileName) {
+        SharedPreferences preferences = getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("profile_name", profileName);
+        editor.apply();
+    }
 
     private void initWidgets() {
         calendarRecyclerView = findViewById(R.id.calendarRecyclerView);

@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -20,7 +22,7 @@ public class CitasActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CitaAdapter citasAdapter;
     private ArrayList<String> listaCitas;
-
+    @SuppressLint({"MissingInflatedId", "LocalSuppress"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,11 @@ public class CitasActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerViewcitas);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        Button btncitas = findViewById(R.id.btn_citas);
+        btncitas.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ListadoMedicosActivity.class);
+            startActivity(intent);
+        });
 
 
         listaCitas = new ArrayList<>();
