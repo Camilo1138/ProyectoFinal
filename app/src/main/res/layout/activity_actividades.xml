@@ -5,6 +5,64 @@
     android:id="@+id/actividades"
     android:layout_height="match_parent">
 
+    <!-- Encabezado -->
+    <TextView
+        android:id="@+id/header_listas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_centerHorizontal="true"
+        android:text="Listas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- Contenedor de botones -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65pt"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Botón Médicos -->
+        <Button
+            android:id="@+id/btn_medicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Médicos"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón Actividades Físicas -->
+        <Button
+            android:id="@+id/btn_actividades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actividades Físicas"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón Medicamentos -->
+        <Button
+            android:id="@+id/btn_medicamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medicamentos"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón Citas -->
+        <Button
+            android:id="@+id/btn_citas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Citas"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
     <!-- Contenedor principal donde se mostrarán los fragmentos -->
     <FrameLayout
         android:id="@+id/nav_host_fragment"
@@ -25,4 +83,3 @@
         app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
-
