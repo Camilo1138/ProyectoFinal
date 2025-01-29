@@ -25,7 +25,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center"
             android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="65dp"
             android:contentDescription="Profile Image"
             android:src="@drawable/icono_perfil" />
         <TextView
