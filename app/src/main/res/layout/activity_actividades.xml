@@ -10,12 +10,13 @@
         android:id="@+id/header_listas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true"
         android:text="Listas"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textAllCaps="true"
+        android:textColor="@color/blue_primary" />
 
     <!-- Contenedor de botones -->
     <LinearLayout
@@ -32,15 +33,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Médicos"
+            android:backgroundTint="#005BAC"
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
 
         <!-- Botón Actividades Físicas -->
         <Button
-            android:id="@+id/btn_actividades"
+            android:id="@+id/btn_actividadesF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Actividades Físicas"
+            android:backgroundTint="#005BAC"
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
 
@@ -49,6 +52,7 @@
             android:id="@+id/btn_medicamentos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#005BAC"
             android:text="Medicamentos"
             android:textSize="18sp"
             android:layout_marginBottom="16dp" />
@@ -58,6 +62,7 @@
             android:id="@+id/btn_citas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#005BAC"
             android:text="Citas"
             android:textSize="18sp" />
 
@@ -80,8 +85,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="0dp"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        android:background="#005BAC"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
