@@ -60,7 +60,7 @@ public class actividadesActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button btn_actividades = findViewById(R.id.btn_actividades);
+        Button btn_actividades = findViewById(R.id.btn_actividadesF);
         btn_actividades.setOnClickListener(v -> {
             Intent intent = new Intent(this, ActividadFisicaActivity.class);
             startActivity(intent);
