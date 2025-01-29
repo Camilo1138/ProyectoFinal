@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -43,18 +45,7 @@ public class Secion_perfilActivity extends AppCompatActivity {
             }
             return true;
         });
-/*
-        setContentView(R.layout.activity_secion_perfil); // 💡 Debe estar antes de findViewById()
 
-        tvName = findViewById(R.id.perfil); // 💡 Asegúrate de que el ID es correcto
-
-        // Recupera el nombre del perfil del Intent
-        PerFil perfilData = (PerFil) getIntent().getSerializableExtra("perfil_data");
-        if (perfilData != null) {
-            tvName.setText(perfilData.getNombre()); // 💡 Esto no fallará si el ID es correcto
-        }
-
-*/
 
         Button btnLogout = findViewById(R.id.btn_logout);
         btnLogout.setOnClickListener(v -> {
@@ -63,5 +54,24 @@ public class Secion_perfilActivity extends AppCompatActivity {
             startActivity(intent);
             finish(); // Cierra la actividad actual
         });
+
+        tvName = findViewById(R.id.profile_name);
+        // Recuperar el nombre del perfil desde SharedPreferences
+        String profileName = getProfileName();
+        if (profileName != null) {
+            tvName.setText(profileName);
+        }
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.secion), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
     }
+    private String getProfileName() {
+        SharedPreferences preferences = getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
+        return preferences.getString("profile_name", "Perfil no disponible");
+    }
+
 }
