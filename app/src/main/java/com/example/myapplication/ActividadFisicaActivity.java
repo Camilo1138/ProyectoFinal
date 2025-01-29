@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -22,13 +23,18 @@ public class ActividadFisicaActivity extends AppCompatActivity {
     private RecyclerView recyclerViewActivities;
     private ActFisicaAdapter activityAdapter;
     private List<ActividadFisica> activityList;
-
+    @SuppressLint({"MissingInflatedId", "LocalSuppress"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad_fisica);
 
         recyclerViewActivities = findViewById(R.id.recyclerViewActivities);
+        Button btnActividadF = findViewById(R.id.btn_actividadesF);
+        btnActividadF.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ListadoMedicosActivity.class);
+            startActivity(intent);
+        });
 
         // Cargar actividades desde el archivo
         activityList = loadActivitiesFromFile();
