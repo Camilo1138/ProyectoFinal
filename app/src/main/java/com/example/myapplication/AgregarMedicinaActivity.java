@@ -63,6 +63,10 @@ public class AgregarMedicinaActivity extends AppCompatActivity {
         // Botón para registrar toma
         btnRegister.setOnClickListener(v -> registerDose());
 
+Button btn_exit= findViewById(R.id.btn_exit);
+        btn_exit.setOnClickListener(v -> {
+            finish(); // Finaliza esta actividad y regresa a la actividad anterior
+        });
 
     }
 
