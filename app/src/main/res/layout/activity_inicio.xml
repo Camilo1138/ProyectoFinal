@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="40dp">
 
         <ImageView
             android:id="@+id/profile_image"
@@ -180,13 +180,13 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="28dp"
         android:layout_marginBottom="25dp"
-        app:fab_color="#005BAC">
+        >
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/idFabConfirmar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_color="#005BAC"
+
             app:fab_icon="@drawable/citaa"
             app:fab_size="mini"
             app:fab_title="Citas" />
@@ -195,7 +195,7 @@
             android:id="@+id/idFabActualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_color="#005BAC"
+
             app:fab_icon="@drawable/medicina2"
             app:fab_size="mini"
             app:fab_title="Medicina" />
@@ -205,7 +205,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            app:fab_color="#005BAC"
+
             app:fab_icon="@drawable/me_dico"
             app:fab_size="mini"
             app:fab_title="Medico" />
@@ -215,7 +215,7 @@
             android:id="@+id/Actividad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_color="#005BAC"
+
             app:fab_icon="@drawable/fisica2"
             app:fab_size="mini"
             app:fab_title="Actividad fixit" />

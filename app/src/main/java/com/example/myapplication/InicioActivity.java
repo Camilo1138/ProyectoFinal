@@ -61,7 +61,7 @@ public class InicioActivity extends AppCompatActivity implements CalendarAdapter
         FloatingActionButton fabMedico = findViewById(R.id.medico);
         fabMedico.setTitle("Medicos");
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation2);
 
         // Mapeo de IDs a clases de actividad
         Map<Integer, Class<?>> activityMap = new HashMap<>();
