@@ -15,9 +15,7 @@
         <activity
             android:name=".ListaMedicinasActivity"
             android:exported="false" />
-        <activity
-            android:name=".ListaMediciasActivity"
-            android:exported="false" />
+
         <activity
             android:name=".actividadesActivity"
             android:exported="false" />
@@ -50,7 +48,8 @@
             android:exported="false" />
         <activity
             android:name=".InicioActivity"
-            android:exported="false" />
+            android:launchMode="singleTop">
+        </activity>
         <activity
             android:name=".SeleccionarPerfilActivity"
             android:exported="false" />

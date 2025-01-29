@@ -29,10 +29,7 @@ public class ListadoMedicosActivity extends AppCompatActivity {
         //Button buttonMedicos = findViewById(R.id.btn_medicos);
         Button btnSalir = findViewById(R.id.btnSalir);
         Button btnMedicos = findViewById(R.id.btn_medicos);
-        btnMedicos.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ListadoMedicosActivity.class);
-            startActivity(intent);
-        });
+
 
         // Mostrar la lista de médicos
         actualizarLista();

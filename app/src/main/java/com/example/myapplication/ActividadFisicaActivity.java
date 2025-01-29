@@ -30,11 +30,7 @@ public class ActividadFisicaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_actividad_fisica);
 
         recyclerViewActivities = findViewById(R.id.recyclerViewActivities);
-        Button btnActividadF = findViewById(R.id.btn_actividadesF);
-        btnActividadF.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ListadoMedicosActivity.class);
-            startActivity(intent);
-        });
+
 
         // Cargar actividades desde el archivo
         activityList = loadActivitiesFromFile();

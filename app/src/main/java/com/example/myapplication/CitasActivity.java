@@ -34,11 +34,7 @@ public class CitasActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerViewcitas);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        Button btncitas = findViewById(R.id.btn_citas);
-        btncitas.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ListadoMedicosActivity.class);
-            startActivity(intent);
-        });
+
 
 
         listaCitas = new ArrayList<>();
